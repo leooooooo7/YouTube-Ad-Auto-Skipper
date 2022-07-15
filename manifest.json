@@ -1,12 +1,27 @@
 {
-	"manifest_version": 2,
-	"name": "Youtube Auto Ad-Skipper",
+	"manifest_version": 3,
+	"name": "PC ToolKit",
 	"version": "1.0",
-	"description": "Automatically skips YouTube ads for MAXIMUM USER EXPERIENCE",
+	"description": "A wonderful assortment of useful tools for your computation device.",
+	"action": {
+		"default_title": "Take a Screenshot"
+	},
+	"background": {
+		"service_worker": "background.js"
+	},
 	"content_scripts": [
 		{
 			"matches": ["https://www.youtube.com/*"],
-			"js": ["./main.js"]
+			"js": ["./adSkip.js"]
+		},
+		{
+			"matches": ["<all_urls>"],
+			"js": ["./screenshot.js"]
 		}
+	],
+	"permissions": [
+		"desktopCapture",
+		"tabs",
+		"downloads"
 	]
 }
