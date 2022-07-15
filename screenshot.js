@@ -1,6 +1,8 @@
 
 // Made using: https://blog.shahednasser.com/how-to-take-screenshots-in-chrome-extension/
 
+// VERY Helpful link: https://www.youtube.com/watch?v=zHIryKuhYA4&t=948s
+
 chrome.runtime.onMessage.addListener((message, sender, senderResponse) => {
     if (message.name === 'stream' && message.streamId) {
         let track, canvas
