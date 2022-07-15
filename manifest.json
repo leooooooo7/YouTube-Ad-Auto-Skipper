@@ -1,0 +1,12 @@
+{
+	"manifest_version": 2,
+	"name": "Youtube Auto Ad-Skipper",
+	"version": "1.0",
+	"description": "Automatically skips YouTube ads for MAXIMUM USER EXPERIENCE",
+	"content_scripts": [
+		{
+			"matches": ["https://www.youtube.com/*"],
+			"js": ["./main.js"]
+		}
+	]
+}
