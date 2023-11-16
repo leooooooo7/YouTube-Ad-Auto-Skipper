@@ -7,7 +7,7 @@ const evt = new MouseEvent("click", {
 });
 
 setInterval(() => {
-    const adButton = document.getElementsByClassName("ytp-ad-skip-button ytp-button")[0];
+    const adButton = document.getElementsByClassName("ytp-ad-skip-button-modern ytp-button")[0];
     const bottomAdButton = document.getElementsByClassName("ytp-ad-overlay-close-container")[0];
     if(adButton) {
         // adButton.dispatchEvent(evt);
@@ -20,4 +20,4 @@ setInterval(() => {
         console.log("Blocked Overlay")
     }
     // console.log("No Button Found")
-}, 1000);
+}, 500);
